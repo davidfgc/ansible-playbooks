@@ -1,12 +1,16 @@
+- name: "Check Architecture"
+  ansible.builtin.set_fact:
+    VSCODE_OS: "darwin"
+  when: ansible_architecture == "x86_64"
+
 - name: "Download and Install Visual Studio Code"
   ansible.builtin.get_url:
-    # url: https://code.visualstudio.com/sha/download?build=stable&os=darwin-arm64
-    url: https://code.visualstudio.com/sha/download?build=stable&os=darwin
-    dest: /tmp/VSCode-darwin-arm64.zip
+    url: https://code.visualstudio.com/sha/download?build=stable&os={{VSCODE_OS}}
+    dest: /tmp/VSCode-{{VSCODE_OS}}.zip
 
 - name: "Unzip Visual Studio Code"
   ansible.builtin.unarchive:
-    src: /tmp/VSCode-darwin-arm64.zip
+    src: /tmp/VSCode-{{VSCODE_OS}}.zip
     dest: /Applications
     remote_src: yes
     creates: /Applications/Visual Studio Code.app

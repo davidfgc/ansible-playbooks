@@ -1,2 +1,3 @@
 ---
 # vars file for install-vscode
+VSCODE_OS: "darwin-arm64"
