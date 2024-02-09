@@ -1,0 +1,19 @@
+- name: "Onboarding Playbook"
+  hosts: localhost
+  tasks:
+    - name: "Hello Playboook"
+      debug:
+        msg: "Hello, World!"
+
+    - name: "Download and Install Visual Studio Code"
+      ansible.builtin.get_url:
+        # url: https://code.visualstudio.com/sha/download?build=stable&os=darwin-arm64
+        url: https://code.visualstudio.com/sha/download?build=stable&os=darwin
+        dest: /tmp/VSCode-darwin-arm64.zip
+
+    - name: "Unzip Visual Studio Code"
+      ansible.builtin.unarchive:
+        src: /tmp/VSCode-darwin-arm64.zip
+        dest: /Applications
+        remote_src: yes
+        creates: /Applications/Visual Studio Code.app
