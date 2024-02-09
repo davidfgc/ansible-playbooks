@@ -1,0 +1,3 @@
+---
+# tasks file for install-vscode
+- include_tasks: download-vscode.yml
