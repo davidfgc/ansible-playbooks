@@ -2,3 +2,5 @@
   hosts: localhost
   roles:
     - role: install-vscode
+    - role: install-asdf
+    - role: install-iterm2

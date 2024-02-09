@@ -1,0 +1,10 @@
+- name: "Clone asdf repository"
+  ansible.builtin.git:
+    repo: https://github.com/asdf-vm/asdf.git
+    dest: ~/.asdf
+    version: v0.14.0
+
+- name: "Add asdf to shell"
+  ansible.builtin.shell: echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.zshrc
+  args:
+    creates: ~/.zshrc

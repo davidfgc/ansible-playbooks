@@ -1,0 +1,7 @@
+---
+# tasks file for install-iterm2
+- name: "Brew iTerm2"
+  community.general.homebrew:
+    name: homebrew/cask/iterm2
+    state: present
+  ignore_errors: yes
