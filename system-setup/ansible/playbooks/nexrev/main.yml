@@ -1,0 +1,5 @@
+- name: "NexRev Playbook"
+  hosts: localhost
+  roles:
+    - role: install-erlang
+    - role: install-elixir

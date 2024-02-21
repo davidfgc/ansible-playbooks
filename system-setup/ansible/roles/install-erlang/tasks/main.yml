@@ -1,0 +1,4 @@
+---
+# tasks file for install-erlang
+- name: "Add asdf plugin"
+  ansible.builtin.shell: asdf plugin add erlang https://github.com/asdf-vm/asdf-erlang.git
