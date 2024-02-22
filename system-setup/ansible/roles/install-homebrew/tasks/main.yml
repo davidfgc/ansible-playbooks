@@ -1,3 +1,4 @@
 ---
 # tasks file for install-homebrew
-- include_tasks: run-script.yml
+- include_tasks: pre-tasks.yml
+- include_tasks: tasks.yml
