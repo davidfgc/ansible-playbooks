@@ -28,7 +28,7 @@ brew_cask_packages:
   # - virtualbox-extension-pack
   # - visual-studio-code
   # - vmware-fusion
-# brew_packages:
+brew_packages:
   # - autoconf
   # - bash-completion
   # - boot2docker
@@ -57,5 +57,6 @@ brew_cask_packages:
   # - tree
   # - vault
   # - wget
+  - yarn
   # - zsh
   # - zsh-syntax-highlighting

@@ -1,6 +1,6 @@
 - name: "Onboarding Playbook"
   hosts: localhost
   roles:
-    - role: install-vscode
+    - role: install-homebrew
     - role: install-asdf
-    - role: install-iterm2
+    - role: install-vscode

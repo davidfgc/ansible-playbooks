@@ -1,8 +1,0 @@
----
-# tasks file for install-yarn
-- name: Installing Homebrew Yarn
-  homebrew:
-    name: "yarn"
-    state: present
-  register: result
-  until: result is successful
