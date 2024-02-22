@@ -3,5 +3,7 @@
   become: false
   roles:
     - role: install-homebrew
+    - role: install-asdf
+    - role: install-node
     - role: install-erlang
     - role: install-elixir

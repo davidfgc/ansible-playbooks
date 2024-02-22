@@ -1,0 +1,11 @@
+---
+# tasks file for install-node
+- name: "Add node plugin"
+  ansible.builtin.shell: asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+  
+- name: "Install node"
+  ansible.builtin.shell: asdf install nodejs {{ item }}
+  with_items: "{{ NODE_VERSIONS }}"
+
+- name: "Set node version globally"
+  ansible.builtin.shell: asdf global nodejs {{NODE_VERSION}}

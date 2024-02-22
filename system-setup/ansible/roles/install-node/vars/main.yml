@@ -1,0 +1,6 @@
+---
+# vars file for install-node
+NODE_VERSION: latest 
+NODE_VERSIONS: 
+  - 16.14.0
+  - latest

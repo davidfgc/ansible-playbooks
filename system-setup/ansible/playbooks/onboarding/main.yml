@@ -3,4 +3,5 @@
   roles:
     - role: install-homebrew
     - role: install-asdf
+    - role: install-node
     - role: install-vscode
